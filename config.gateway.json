@@ -1,0 +1,21 @@
+{
+   "load-balance":{
+      "group":{
+          "wan_failover":{
+              "transition-script":"/config/scripts/wan-load-balance-hack.sh"
+          }
+      }
+   },
+   "system":{
+      "task-scheduler":{
+         "task":{
+            "postprovision":{
+               "executable":{
+                  "path":"/config/scripts/postprovision.sh"
+               },
+               "interval":"3m"
+            }
+         }
+      }
+   }
+}
