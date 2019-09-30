@@ -8,4 +8,6 @@
 
 On the UniFi Controller, add snipet from `config.gateway.json` to your site. Note that the modification to `transition-script` from `config.gateway.json` appears to be overridden by Ubiquiti's configuration, hence also adding a `task-scheduler` item to run the script.
 
-Tested on a USG-PRO-4 but should work on any USG variant with a two-interface failover WAN configuration. With slight modification it should also work with an EdgeRouter --ignore `config.gateway.json`, remove the line calling `wan-event-report.sh` from `wan-load-balance-hack.sh`, and from the CLI add something like `set load-balance group wan_failover transition-script /config/scripts/wan-load-balance-hack.sh` to your configuration.
+Tested on a USG-PRO-4 but should work on any USG variant with a two-interface failover WAN configuration. 
+
+With slight modification it should also work with an EdgeRouter -- ignore `config.gateway.json`, remove the line calling `wan-event-report.sh` from `wan-load-balance-hack.sh`, and from the CLI add something like `set load-balance group wan_failover transition-script /config/scripts/wan-load-balance-hack.sh` to your configuration.
