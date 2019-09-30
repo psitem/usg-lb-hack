@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# File: wan-event-report.sh
-# Desc: Reports WAN transistion events to the controller. This script should be configured under the
-#       "load-balance group <GROUP_NAME> transition-script" config node. If the controller reporting
-#       script is not found, logs to syslog
-
 GROUP=$1
 IFACE=$2
 STATE=$3
