@@ -11,7 +11,7 @@
          "task":{
             "postprovision":{
                "executable":{
-                  "path":"/config/scripts/postprovision.sh"
+                  "path":"/config/scripts/post-config.d/postboot.sh"
                },
                "interval":"3m"
             }

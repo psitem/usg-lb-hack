@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Place in /config/scripts/post-config.d/
 GROUP=$1
 IFACE=$2
 STATE=$3

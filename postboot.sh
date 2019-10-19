@@ -1,4 +1,5 @@
 #!/bin/bash
+# Place in /config/scripts/post-config.d/
 
 WRAPPER="/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper"
 $WRAPPER begin

@@ -4,9 +4,9 @@
 
 **Solution:** Temporarily disabling WAN2 after failing back to WAN1 will reset whatever condition(s) cause this.
 
-**Instructions:** On the USG, place \*.sh files in /config/scripts/ and `chmod +x /config/scripts/*.sh`
+**Instructions:** On the USG, place `postboot.sh` in `/config/scripts/post-config.d` and `wan-load-balance-hack.sh` in `/config/scripts/post-config.d`. Be sure to `chmod +x` both scripts.
 
-On the UniFi Controller, add snipet from `config.gateway.json` to your site. Note that the modification to `transition-script` from `config.gateway.json` appears to be overridden by Ubiquiti's configuration, hence also adding a `task-scheduler` item to run the script.
+On the UniFi Controller, add snipet from `config.gateway.json` to your site. Note that the modification to `transition-script` from `config.gateway.json` appears to be overridden by Ubiquiti's provisioning, hence also adding a `task-scheduler` item to re-run the `postboot.sh` script to update the `transition-script`.
 
 Tested on a USG-PRO-4 but should work on any USG variant with a two-interface failover WAN configuration. 
 
